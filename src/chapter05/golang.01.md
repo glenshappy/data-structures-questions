@@ -240,7 +240,7 @@ P (Processor): 逻辑处理器,即为G和M的调度对象，用来调度G和M之
 <img width="300" align="center" src="../images/60.jpg" />
 </p>
 
-当M0返回时，它会尝试从其他线程中“偷”一个上下文过来，如果没有偷到，会把Goroutine放到`Global runqueue`中去，然后把自己放入线程缓存中。
+当M0返回时，它会尝试从其他线程中“偷”一个上下文(<b>P</b>)过来，如果没有偷到，会把Goroutine放到`Global runqueue`中去，然后把自己放入线程缓存中。
 
 上下文会定时检查`Global runqueue`。
 
